@@ -1,0 +1,57 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="VeteranoService - свій до свого по своє ;-)")
+
+    title VeteranoService
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/index.css')
+
+  body
+    // HEADER
+    //- include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      section.main-section
+        .main-section__bg-content
+        .main-section__lightbulb-holder
+          img.lightbulb(src='assets/img/lightbulb.png' alt='lightbulb.png')
+          img.logo(src='assets/img/logo.png' alt='logo.png')
+          img.light-dim(src='assets/img/light-dim.png' alt='light-dim.png')
+          img.light-glaring(src='assets/img/light-glaring.png' alt='light-glaring.png')
+        img.main-section__footer-inscription(src='assets/img/veterano_service.png' alt='veterano_service.png')
+        nav.main-section__navigation
+          ul.main-navigation-list
+            li.main-navigation-list-item: a.main-navigation-link(href='#') Бізнеси ветеранів
+            li.main-navigation-list-item: a.main-navigation-link(href='#') Вакансії
+            li.main-navigation-list-item: a.main-navigation-link(href='#') Корисно
+            li.main-navigation-list-item: a.main-navigation-link(href='#') Головна
+            li.main-navigation-list-item: a.main-navigation-link(href='#') Партнери
+            li.main-navigation-list-item: a.main-navigation-link(href='#') Про нас
+            li.main-navigation-list-item: a.main-navigation-link(href='#') Новини
+      // /SECTION 1
+
+    // /MAIN SECTION
+
+    // FOOTER
+    //- include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    //- script(src='assets/libs/fontawesome-all.js')
+
+    // own js
+    script(src='assets/js/index.js')

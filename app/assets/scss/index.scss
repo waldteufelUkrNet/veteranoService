@@ -1,0 +1,105 @@
+// @import "variables";
+@import "fonts";
+@import "style_general";
+
+.main-section {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	background: lightgrey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	&__bg-content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	&__lightbulb-holder {
+		width: 100%;
+		height: 70%;
+		position: relative;
+		.lightbulb {
+      height: calc(100% - 30px);
+      position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, calc(-50% + 30px) );
+		}
+		.logo {
+			height: 30%;
+			position: absolute;
+			z-index: 3;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, calc(-110% + 30px));
+		}
+		.light-dim {
+      height: 60%;
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, calc(-80% + 30px));
+		}
+		.light-glaring {
+			@extend .light-dim;
+			z-index: 2;
+		}
+	}
+	&__footer-inscription {
+		max-width: 60%;
+		max-height: 30%;
+	}
+	&__navigation {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.main-navigation-list-item {
+			display: inline;
+			position: absolute;
+		}
+		.main-navigation-list-item:nth-of-type(1) {
+			top: 20px;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		.main-navigation-list-item:nth-of-type(2) {
+			top: 25%;
+		}
+		.main-navigation-list-item:nth-of-type(3) {
+			top: 40%;
+		}
+		.main-navigation-list-item:nth-of-type(4) {
+			top: 55%;
+		}
+		.main-navigation-list-item:nth-of-type(5) {
+			top: 25%;
+		}
+		.main-navigation-list-item:nth-of-type(6) {
+			top: 40%;
+		}
+		.main-navigation-list-item:nth-of-type(7) {
+			top: 55%;
+		}
+		.main-navigation-link {
+			// font-family: bold;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+
+
+// @import "index/index_320+";
+// @import "index/index_576+";
+// @import "index/index_768+";
+// @import "index/index_992+";
+// @import "index/index_1200+";
+
+//BEM-blocks
+// @import "../BEM-blocks/anti_bot_filter/anti_bot_filter.scss";
