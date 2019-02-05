@@ -28,13 +28,18 @@ html(lang='ru')
       // SECTION 1
       section.main-section
         .main-section__bg-content
-          img(src='assets/img/btr4.jpg' alt='btr4.jpg' style="min-width: 100%; min-height: 100%")
+          .main-section__bg-content-cover
+          include assets/BEM-blocks/bg-content/bg-content.pug
+
+        // лампочка
         .main-section__lightbulb-holder
           img.lightbulb(src='assets/img/lightbulb.png' alt='lightbulb.png')
           img.logo(src='assets/img/logo.png' alt='logo.png')
           img.light-dim(src='assets/img/light-dim.png' alt='light-dim.png')
           img.light-glaring(src='assets/img/light-glaring.png' alt='light-glaring.png')
+
         img.main-section__footer-inscription(src='assets/img/veterano_service.png' alt='veterano_service.png')
+
         nav.main-section__navigation
           ul.main-navigation-list
             li.main-navigation-list-item: a.main-navigation-link(href='#') Бізнеси ветеранів
@@ -45,6 +50,14 @@ html(lang='ru')
             li.main-navigation-list-item: a.main-navigation-link(href='#') Про нас
             li.main-navigation-list-item: a.main-navigation-link(href='#') Новини
       // /SECTION 1
+
+      // SECTION 1
+      section.popups-section
+        include assets/BEM-blocks/popup-prevent-exit/popup-prevent-exit.pug
+      // /SECTION 1
+
+      .language-switcher-wrapper
+        include assets/BEM-blocks/language-switcher/language-switcher.pug
 
     // /MAIN SECTION
 

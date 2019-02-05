@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".language-switcher__shutter").click(function(){"ua"==$(".language-switcher").attr("data-language")?($(this).css("left","0%"),$(".language-switcher").attr("data-language","en")):($(this).css("left","50%"),$(".language-switcher").attr("data-language","ua"))})});
