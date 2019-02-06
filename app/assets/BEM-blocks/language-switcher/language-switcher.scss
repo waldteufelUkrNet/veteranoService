@@ -13,11 +13,23 @@
 	&__shutter {
 		display          : block;
 		height           : 100%;
-		width            : 50%;
+		width            : 33.33%;
 		position         : absolute;
 		top              : 0;
 		cursor           : pointer;
-		left             : 50%;
 		background-color : rgba(0,0,0,.5);
+	}
+	&__shutter-ua {
+		@extend .language-switcher__shutter;
+		left             : 0%;
+		height           : .1px
+	}
+	&__shutter-en {
+		@extend .language-switcher__shutter;
+		left             : 33.33%;
+	}
+	&__shutter-ru {
+		@extend .language-switcher__shutter;
+		left             : 66.66%;
 	}
 }
