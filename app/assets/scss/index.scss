@@ -6,6 +6,7 @@
 	position       : relative;
 	width          : 100vw;
 	height         : 100vh;
+	overflow       : hidden;
 }
 
 .main-section {
@@ -79,7 +80,7 @@
 		.main-navigation-list-item {
 			display    : inline;
 			position   : absolute;
-			z-index    : 1;
+			z-index    : 4;
 		}
 		.main-navigation-list-item:nth-of-type(1) {
 			top        : 20px;
@@ -123,6 +124,13 @@
 	z-index        : 1;
 	right          : 10px;
 	top            : 10px;
+}
+
+.social-btns-main-wrapper {
+	position       : absolute;
+	z-index        : 1;
+	right          : 10px;
+	top            : 90px;
 }
 
 // @import "index/index_320+";

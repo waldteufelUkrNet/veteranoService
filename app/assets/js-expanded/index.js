@@ -1,32 +1,43 @@
 $(document).ready(function(){
-  navPositioning()
+  // setInterval - щоб пункти меню не з'їжджалися докупи в центрі (через картинку лампоки, яка періодично не встигає
+  // відмалюватися)
+  setInterval(function(){
+    navPositioning()
+  },4);
+
+
+  //hover-ефект
+  $('.main-navigation-link').on({
+    mouseenter: function(){
+      // запалювання лампочки
+      $('.light-glaring').css('opacity','1');
+      // підсвічування тла
+      $('.main-section__bg-content-cover').css('background-color','rgba(0,0,0,.4)');
+    },
+    mouseleave: function(){
+      // виключення лампочки
+      $('.light-glaring').css('opacity','0');
+      // затемнення тла
+      $('.main-section__bg-content-cover').css('background-color','rgba(0,0,0,.5)');
+    }
+  });
 });
 
 $(window).resize(function(){
   navPositioning()
 });
 
-//hover-ефект
-$('.main-navigation-link').on({
-	mouseenter: function(){
-		// запалювання лампочки
-		$('.light-glaring').css('opacity','1');
-		// підсвічування тла
-		$('.main-section__bg-content-cover').css('background-color','rgba(0,0,0,.4)');
-	},
-	mouseleave: function(){
-		// виключення лампочки
-		$('.light-glaring').css('opacity','0');
-		// затемнення тла
-		$('.main-section__bg-content-cover').css('background-color','rgba(0,0,0,.5)');
-	}
-});
+
 
 function navPositioning() {
   var lightbulbWidth = $('.lightbulb').width(),
+
       bodyWidth      = $('body').width();
 
-  var tempLeft = (lightbulbWidth/2 + bodyWidth/2) + 15 + 'px';
+  var tempLeft = bodyWidth/2 - $('.main-navigation-list-item:eq(0)').width()/2 + 'px';
+  $('.main-navigation-list-item:eq(0)').css('left', tempLeft);
+
+  tempLeft = (lightbulbWidth/2 + bodyWidth/2) + 15 + 'px';
   $('.main-navigation-list-item:eq(1)').css('left', tempLeft);
 
   tempLeft = (lightbulbWidth/2 - lightbulbWidth*0.06 + bodyWidth/2) + 15 + 'px';
