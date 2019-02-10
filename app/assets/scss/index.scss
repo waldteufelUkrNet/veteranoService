@@ -130,7 +130,8 @@
 	position       : absolute;
 	z-index        : 1;
 	right          : 10px;
-	top            : 90px;
+	top            : 50%;
+	transform      : translate(0,-50%);
 }
 
 // @import "index/index_320+";

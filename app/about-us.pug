@@ -1,0 +1,51 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="VeteranoService - свій до свого по своє ;-)")
+
+    title VeteranoService
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/index.css')
+
+  body
+    // HEADER
+    //- include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      section.main-section ПРО НАС
+
+      // /SECTION 1
+
+      // SECTION 2
+      section.popups-section
+        include assets/BEM-blocks/popup-compliment/popup-compliment.pug
+        include assets/BEM-blocks/popup-no-russian-language-suppurt/popup-no-russian-language-suppurt.pug
+      // /SECTION 2
+
+      .language-switcher-wrapper
+        include assets/BEM-blocks/language-switcher/language-switcher.pug
+
+    // /MAIN SECTION
+
+    // FOOTER
+    //- include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    //- script(src='assets/libs/fontawesome-all.js')
+
+    // own js
+    script(src='assets/js/index.js')

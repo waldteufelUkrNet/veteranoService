@@ -5,7 +5,9 @@ $(document).mouseleave(function(e){
   // якщо мишка вийшла за верхню межу екрана
   if (e.clientY <= 0) {
 
+    // якщо попап ще не показувався
     if (!sessionStorage.getItem('popupComplimentWasShown')) {
+
       // поява підкладки
       $('.popups-section').css('display','block');
 
@@ -17,7 +19,7 @@ $(document).mouseleave(function(e){
             ornamentHeight  = $('.small-popup__background-image').outerHeight(),
             ornamentsAmount = Math.ceil(popupHeight / ornamentHeight);
         for (var i=0; i<ornamentsAmount-1; i++) {
-          $('.small-popup__background').append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">');
+          $('#popup-compliment .small-popup__background').append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">');
         }
 
       },50);

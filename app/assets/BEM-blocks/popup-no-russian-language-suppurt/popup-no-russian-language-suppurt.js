@@ -19,9 +19,9 @@ $(document).ready(function(){
     $('img.language-switcher__img[src="assets/img/ru.png"]').css({'position'   : 'absolute',
     	                                                            'zIndex'     : 8889,
     	                                                            'top'        : imageTop - 3,
-    	                                                            'left'       : imageLeft - 68,
+    	                                                            'left'       : imageLeft - 88,
     	                                                            'cursor'     : 'pointer'
-    	                                                          }).click(function(){ playWithRussianIcon(this) });
+    	                                                          }).bind('click mouseenter', function(){ playWithRussianIcon(this) });
 
   });
 
@@ -30,9 +30,9 @@ $(document).ready(function(){
   	$(THIS).css({'transition':'left .5s',
   	             'left': bodyWidth/2})
            // по кліку - приховуємо прапор та показуємо повідомлення
-           .click(function(){
+           .bind('click mouseenter', function(){
                     $(THIS).css({'transition':'top .5s',
-                                 'top': '-30px'});
+                                 'top': '-100%'});
                     // поява підкладки
                     $('.popups-section').css('display','block');
 
@@ -44,15 +44,10 @@ $(document).ready(function(){
                           ornamentHeight  = $('.small-popup__background-image').outerHeight(),
                           ornamentsAmount = Math.ceil(popupHeight / ornamentHeight);
                       for (var i=0; i<ornamentsAmount-1; i++) {
-                        $('.small-popup__background').append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">');
+                        $('#popup-no-russian-language-suppurt .small-popup__background').append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">');
                       }
 
                     },50);
-
-                    // запис в sessionStorage
-                    sessionStorage.setItem('popupNoRussianLanguageSuppurt',true);
-
-
            });
   }
 
@@ -60,7 +55,7 @@ $(document).ready(function(){
   $('#popup-no-russian-language-suppurt__close-button, #popup-no-russian-language-suppurt button.small-popup__button').click( function() { closeNoRussianLanguageSuppurtPopup() } );
 
   function closeNoRussianLanguageSuppurtPopup () {
-    $('#popup-no-russian-language-suppurt__close-button').remove();
+    $('#popup-no-russian-language-suppurt').remove();
     $('.popups-section').css('display','none');
   }
 
