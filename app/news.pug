@@ -1,5 +1,5 @@
 doctype html
-html(lang='ru')
+html(lang='ua')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -16,17 +16,18 @@ html(lang='ru')
     script(src='assets/libs/jquery.js')
 
     // own stylesheet
-    link(rel='stylesheet', type='text/css', href='assets/css/index.css')
+    link(rel='stylesheet', type='text/css', href='assets/css/news.css')
 
   body
     // HEADER
-    //- include assets/BEM-blocks/header/header.pug
+    include assets/BEM-blocks/header/header.pug
     // /HEADER
 
     // MAIN SECTION
     main.main
       // SECTION 1
-      section.main-section НОВИНИ
+      section.main-section
+        h1.page-header НОВИНИ
 
       // /SECTION 1
 
@@ -36,8 +37,8 @@ html(lang='ru')
         include assets/BEM-blocks/popup-no-russian-language-suppurt/popup-no-russian-language-suppurt.pug
       // /SECTION 2
 
-      .language-switcher-wrapper
-        include assets/BEM-blocks/language-switcher/language-switcher.pug
+      //- .language-switcher-wrapper
+      //-   include assets/BEM-blocks/language-switcher/language-switcher.pug
 
     // /MAIN SECTION
 
