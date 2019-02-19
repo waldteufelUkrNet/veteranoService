@@ -20,6 +20,7 @@ html {
 
 body {
 	background-image : url('../img/texture.jpg');
+	overflow         : hidden;
 }
 
 .page-header {
@@ -30,10 +31,11 @@ body {
 	letter-spacing   : 1px;
 }
 
-section {
+section:not(#index-section) {
 	border           : 1px dotted red;
 	max-width        : 1500px;
-	margin           : 0 auto;
+	margin           : 70px auto 0;
+
 }
 
 .popups-section {
