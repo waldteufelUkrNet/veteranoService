@@ -12,10 +12,14 @@
 	justify-content      : space-between;
 	align-items          : center;
 	padding              : 15px;
+	background-image     : linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.01));
+	box-shadow           : 0 0 5px rgba(0,0,0,.05);
+	transition           : background-color .5s;
 
 	&__logo {
 		margin-right       : auto;
 		align-self         : flex-start;
+		transition         : margin-top .5s;
 	}
 
 	&__logo-img {
@@ -26,7 +30,7 @@
 
 	&__social-btns-area {
 		height             : 100%;
-		margin             : 0 50px;
+		margin             : 0 20px;
 	}
 
 	&__social-btn {
@@ -34,7 +38,7 @@
 		margin             : 0 10px;
 		height             : 100%;
 		border-radius      : 50%;
-		box-shadow         : 0 0 0px green;
+		box-shadow         : 0 0 5px white;
 		transition         : background-color .5s, box-shadow .5s;
 		&:hover {
 			background-color : yellow;
@@ -48,7 +52,9 @@
 
 	&__menu {
 		position           : relative;
-	}
+		margin-left        : 25px;
+		box-shadow         : 0 0 5px white;
+  }
 
 	&__menu-btn {
 		width              : 180px;
@@ -67,6 +73,7 @@
 			font-family      : bold;
 			font-size        : 2.6rem;
 			padding-right    : 10px;
+			text-shadow      : 0 0 5px white;
 		}
 		img {
 			height           : 40px;
@@ -77,6 +84,7 @@
 		display            : block;
 		position           : absolute;
 		width              : 100%;
+		overflow: hidden;
 		li {}
 	}
 
