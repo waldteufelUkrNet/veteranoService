@@ -81,10 +81,10 @@
 	}
 
 	&__menu-list {
-		display            : block;
+		display            : none;
 		position           : absolute;
 		width              : 100%;
-		overflow: hidden;
+		overflow           : hidden;
 		li {}
 	}
 

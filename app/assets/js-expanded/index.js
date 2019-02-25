@@ -12,13 +12,13 @@ $(document).ready(function(){
       // запалювання лампочки
       $('.light-glaring').css('opacity','1');
       // підсвічування тла
-      $('.main-section__bg-content-cover').css('background-color','rgba(0,0,0,.4)');
+      $('.index-section__bg-content-cover').css('background-color','rgba(0,0,0,.4)');
     },
     mouseleave: function(){
       // виключення лампочки
       $('.light-glaring').css('opacity','0');
       // затемнення тла
-      $('.main-section__bg-content-cover').css('background-color','rgba(0,0,0,.5)');
+      $('.index-section__bg-content-cover').css('background-color','rgba(0,0,0,.5)');
     }
   });
 });

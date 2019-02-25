@@ -24,8 +24,8 @@ $(document).ready(function(){
   var isMemuOpen     = false;
   var arrOfMenuItems = $('.header__menu-link');
   var delay          = 0;
-  var delayStep      = 200;
-  var freezeTime     = arrOfMenuItems.length * 200;
+  var delayStep      = 70;
+  var freezeTime     = arrOfMenuItems.length * delayStep;
 
 
   $('.header__menu-btn').click(function(){
@@ -41,18 +41,10 @@ $(document).ready(function(){
 
       // відкриття/закриття
       if (isMemuOpen) {
-        delay = 0;
-        // навішування анімації через цикл - для цього потрібна додаткова анонімна ф-я
-        for (var i=0; i<arrOfMenuItems.length; i++) {
-          (function(j){
-            setTimeout(function(){
-              $(arrOfMenuItems[j]).css({'right':'calc( -100% - 15px )'});
-            }, delay);
-            delay = delay + delayStep;
-          })(i);
-        }
-        isMemuOpen = false;
+        closeMenu()
       } else {
+        $('.header__menu-list').css('display','block');
+
         delay = 0;
         // навішування анімації через цикл - для цього потрібна додаткова анонімна ф-я
         for (var i=0; i<arrOfMenuItems.length; i++) {
@@ -71,17 +63,25 @@ $(document).ready(function(){
 
   $(document).click(function(event){
     if ( isMemuOpen && isMenuClicable && event.target.className != 'header__menu-btn' ) {
-      // закрити меню
-      delay = 0;
-      for (var i=0; i<arrOfMenuItems.length; i++) {
-        (function(j){
-          setTimeout(function(){
-            $(arrOfMenuItems[j]).css({'right':'calc( -100% - 15px )'});
-          }, delay);
-          delay = delay + delayStep;
-        })(i);
-      }
-      isMemuOpen = false;
+      closeMenu()
     }
   });
+
+  function closeMenu() {
+    // закрити меню
+    delay = 0;
+    // навішування анімації через цикл - для цього потрібна додаткова анонімна ф-я
+    for (var i=0; i<arrOfMenuItems.length; i++) {
+      (function(j){
+        setTimeout(function(){
+          $(arrOfMenuItems[j]).css({'right':'calc( -100% - 15px )'});
+        }, delay);
+        delay = delay + delayStep;
+      })(i);
+    }
+    setTimeout(function(){
+      $('.header__menu-list').css('display','none');
+    },delay);
+    isMemuOpen = false;
+  }
 });
