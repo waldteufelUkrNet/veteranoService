@@ -106,10 +106,21 @@
     }
   }
   &__social-btns-area {
-    border: 1px dotted red;
+    padding            : 6px 0;
+    display            : flex;
+    justify-content    : flex-start;
+    align-items        : center;
   }
-  &__social-btn {}
-  &__social-img {}
+  &__social-btn {
+    margin-right       : 10px;
+    width              : 24px;
+    height             : 24px;
+  }
+  &__social-img {
+    width              : 24px;
+    height             : 24px;
+    user-select        : none;
+  }
 }
 
 @media only screen and (min-width: 768px) {
