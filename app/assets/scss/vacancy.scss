@@ -1,7 +1,7 @@
 // @import "variables";
 @import "fonts";
 @import "style_general";
-
+@import "infoblock";
 
 // @import "index/index_320+";
 // @import "index/index_576+";
@@ -11,3 +11,10 @@
 
 //BEM-blocks
 // @import "../BEM-blocks/anti_bot_filter/anti_bot_filter.scss";
+
+.main-section {
+  &__special-link { border: 1px dotted red;
+    display: inline-block;
+    margin-left: auto;
+  }
+}
