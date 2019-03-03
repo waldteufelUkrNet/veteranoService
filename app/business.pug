@@ -1,5 +1,5 @@
 doctype html
-html(lang='ru')
+html(lang='ua')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -27,8 +27,25 @@ html(lang='ru')
     main.main
       // SECTION 1
       section.main-section
-        h1.page-header БІЗНЕСИ
+        h1.main-section__header БІЗНЕСИ
 
+        .search-wrapper
+          form.search
+            button.search__type-btn(type='button' title='вибрати тип пошуку'): img(src="assets/img/bar-chart.png", alt="bar-chart.png")
+            ul.search__type-list
+              li.search__list-item
+                .search__list-item-img-wrapper: img(src="assets/img/bar-chart.png", alt="bar-chart.png")
+                span пошук по категоріях
+              li.search__list-item
+                .search__list-item-img-wrapper: img(src="assets/img/pie-chart.png", alt="pie-chart.png")
+                span пошук по видах
+              li.search__list-item
+                .search__list-item-img-wrapper: img(src="assets/img/place-marker.png", alt="place-marker.png")
+                span пошук по містах
+            input.search__field(type="text")
+            button.search__btn(type='button')
+              i.fas.fa-search
+              span пошук
       // /SECTION 1
 
       // SECTION 2
@@ -46,7 +63,7 @@ html(lang='ru')
     //- include assets/BEM-blocks/footer/footer.pug
     // /FOOTER
 
-    //- script(src='assets/libs/fontawesome-all.js')
+    script(src='assets/libs/fontawesome-all.js')
 
     // own js
-    script(src='assets/js/index.js')
+    //- script(src='assets/js/business.js')
