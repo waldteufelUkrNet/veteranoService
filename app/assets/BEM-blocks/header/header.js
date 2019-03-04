@@ -1,21 +1,31 @@
 $(document).ready(function(){
 
   /* ↓↓↓ зміна розмірів логотипу при прокрутці ↓↓↓ */
-  if ( $('.header').offset().top >= 30 ) {
-    $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
-    $('.header').css({'background-color':'rgba(0,0,0,.75)'});
-  } else {
-    $('.header__logo-img').css({'height':'160px','margin-top':'0px'});
-    $('.header').css({'background-color':'transparent'});
-  }
-
-  $(document).scroll(function(){
+  if ( $('.header').outerWidth() > 480 ) {
     if ( $('.header').offset().top >= 30 ) {
       $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
       $('.header').css({'background-color':'rgba(0,0,0,.75)'});
     } else {
       $('.header__logo-img').css({'height':'160px','margin-top':'0px'});
       $('.header').css({'background-color':'transparent'});
+    }
+  } else {
+    $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
+    $('.header').css({'background-color':'rgba(0,0,0,.75)'});
+  }
+
+  $(document).scroll(function(){
+    if ( $('.header').outerWidth() > 480 ) {
+      if ( $('.header').offset().top >= 30 ) {
+        $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
+        $('.header').css({'background-color':'rgba(0,0,0,.75)'});
+      } else {
+        $('.header__logo-img').css({'height':'160px','margin-top':'0px'});
+        $('.header').css({'background-color':'transparent'});
+      }
+    } else {
+      $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
+      $('.header').css({'background-color':'rgba(0,0,0,.75)'});
     }
   }); /* ↑↑↑ /зміна розмірів логотипу при прокрутці ↑↑↑ */
 
