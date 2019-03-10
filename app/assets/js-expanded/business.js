@@ -10,14 +10,15 @@ $('.search__type-btn').click(function(){
 });
 
 $('.search__list-item').click(function(){
-  var tempArrOfInputs = $('.search__field');
+  var tempArrOfInputs    = $('.search__field');
   var tempArrOfListItems = $('.search__list-item');
+
   for (var i=0; i<tempArrOfListItems.length; i++) {
     if ( this == tempArrOfListItems[i] ) {
       $(tempArrOfInputs).css('display','none');
       $(tempArrOfInputs[i]).css('display','block');
-      var imgSrc = $(this).siblings('.search__list-item-img-wrapper').children('img').attr('src');
-      var imgAlt = $(this).siblings('.search__list-item-img-wrapper').children('img').attr('alt');
+      var imgSrc = $(this).children('.search__list-item-img-wrapper').children('img').attr('src');
+      var imgAlt = $(this).children('.search__list-item-img-wrapper').children('img').attr('alt');
       $('.search__type-btn img').attr({'src':imgSrc,'alt':imgAlt});
     }
   }

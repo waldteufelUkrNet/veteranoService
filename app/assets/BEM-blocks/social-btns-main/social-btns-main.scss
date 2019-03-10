@@ -7,8 +7,8 @@
   align-items          : center;
   flex-wrap            : wrap;
   width                : 50px;
-  height               : 180px;
-  padding              : 3px 0;
+  height               : auto;
+  padding              : 6px 0 0;
   &__header {}
   &__link {
     display            : block;
@@ -19,6 +19,7 @@
     padding            : 3px;
     background-color   : rgba(255,255,255,.8);
     transition         : background-color .3s, width .3s, height .3s;
+    margin-bottom      : 6px;
     &:hover {
       background-color : rgba(255,255,255,1);
       width            : 42px;
