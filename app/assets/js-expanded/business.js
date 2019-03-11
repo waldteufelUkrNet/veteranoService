@@ -32,3 +32,8 @@ $(document).click(function(e) {
     iMenuOpen = false
   }
 });
+
+function showBusiness() {
+  $('.popups-section').css('display','block');
+  $('.popup-business').css('display','block');
+}

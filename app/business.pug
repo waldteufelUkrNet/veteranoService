@@ -52,7 +52,7 @@ html(lang='ua')
               span пошук
 
         .business-wrapper
-          a(href="#").business
+          a(href="#" onclick="showBusiness()").business
             img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
             img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
             h3.business__name атомийка
@@ -147,7 +147,7 @@ html(lang='ua')
       // /SECTION 1
 
       // SECTION 2
-      section.popups-section(style="display: block")
+      section.popups-section
         //- include assets/BEM-blocks/popup-compliment/popup-compliment.pug
         include assets/BEM-blocks/popup-business/popup-business.pug
         include assets/BEM-blocks/popup-no-russian-language-suppurt/popup-no-russian-language-suppurt.pug
