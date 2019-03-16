@@ -28,6 +28,12 @@ html(lang='ua')
       // SECTION 1
       section.main-section
         h1.main-section__header БІЗНЕСИ
+        a.place(href="#")
+          img(src="assets/img/place.png", alt="place.png")
+          span Розміщення на сайті
+        a.help(href="#")
+          img(src="assets/img/kozak.png", alt="kozak.png")
+          span Допомога проекту
 
         .search-wrapper
           form.search
@@ -36,17 +42,25 @@ html(lang='ua')
               img(src="assets/img/bar-chart.png", alt="bar-chart.png")
             ul.search__type-list
               li.search__list-item
-                .search__list-item-img-wrapper: img(src="assets/img/bar-chart.png", alt="bar-chart.png")
-                span пошук по категоріях
-              li.search__list-item
                 .search__list-item-img-wrapper: img(src="assets/img/pie-chart.png", alt="pie-chart.png")
                 span пошук по видах
               li.search__list-item
                 .search__list-item-img-wrapper: img(src="assets/img/place-marker.png", alt="place-marker.png")
                 span пошук по містах
-            input#category-search.search__field(type="text" placeholder='пошук по категоріях...')
-            input#type-search.search__field(type="text" placeholder='пошук по видах...')
-            input#sity-search.search__field(type="text" placeholder='пошук по містах...')
+            select#type-search.search__field
+              option(value='null') пошук по видах...
+              option(value='vyd1') вид 1
+              option(value='vyd2') вид 2
+              option(value='vyd3') вид 3
+              option(value='vyd4') вид 4
+              option(value='vyd5') вид 5
+            select#sity-search.search__field
+              option(value='null') пошук по містах...
+              option(value='kyiv') Київ
+              option(value='odessa') Одесса
+              option(value='harkiv') Харків
+              option(value='lviv') Львів
+              option(value='mykolajiv') Миколаїв
             button.search__btn(type='button')
               i.fas.fa-search
               span пошук
@@ -92,58 +106,7 @@ html(lang='ua')
             img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
             img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
             h3.business__name veterano brauni
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name атомийка
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name veterano brauni
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name атомийка
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name veterano brauni
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name атомийка
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name veterano brauni
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name атомийка
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name veterano brauni
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name атомийка
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name veterano brauni
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name атомийка
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name veterano brauni
-          a(href="#").business
-            img.business__bcg(src="assets/img/gear-wheel.png", alt="gear-wheel.png")
-            img.business__img(src="assets/img/atocarwash.jpg", alt="atocarwash.jpg")
-            h3.business__name атомийка
+
       // /SECTION 1
 
       // SECTION 2

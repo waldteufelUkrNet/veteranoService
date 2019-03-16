@@ -10,3 +10,11 @@
 
 //BEM-blocks
 // @import "../BEM-blocks/anti_bot_filter/anti_bot_filter.scss";
+
+.about-us-introduce {
+  font : 1.8rem spec;
+  padding-bottom: 30px;
+  @media only screen and (min-width: 768px) {
+    text-align: justify;
+  }
+}

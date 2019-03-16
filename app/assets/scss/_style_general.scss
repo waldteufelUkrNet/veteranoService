@@ -27,6 +27,7 @@ body {
 	max-width        : 1500px;
 	margin           : 70px auto 0;
 	padding          : 0 15px;
+	position         : relative;
   &__header {
 		font-family    : boldItal;
 		font-size      : 2.6rem;
@@ -49,4 +50,27 @@ body {
 	margin           : 0;
 	background-color : rgba(0,0,0,.3);
 	display          : none;
+}
+
+.place,
+.help {
+	position: absolute;
+	top: 0;
+	font: 16px spec;
+	display: block;
+	max-width: 80px;
+	text-align: center;
+	line-height: 1.1em;
+  img {
+    max-width: 80px;
+    max-height: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.place {
+	left: 0;
+}
+.help {
+	right: 0;
 }

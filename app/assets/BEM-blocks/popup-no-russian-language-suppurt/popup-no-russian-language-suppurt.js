@@ -9,7 +9,7 @@ $(document).ready(function(){
     $('.language-switcher__shutter-en').css({'width':'50%', 'left':'50%'});
     $('.language-switcher__shutter-ru').css({'display':'none'});
 
-    // змінюємо положення московського прапора та навішуємо обробник
+    // змінюємо положення московського прапора
     var imageTop  = $('img.language-switcher__img[src="assets/img/ru.png"]').offset().top;
     var imageLeft = $('img.language-switcher__img[src="assets/img/ru.png"]').offset().left;
     bodyWidth     = $('body').outerWidth();
@@ -21,35 +21,33 @@ $(document).ready(function(){
     	                                                            'top'        : imageTop - 3,
     	                                                            'left'       : imageLeft - 88,
     	                                                            'cursor'     : 'pointer'
-    	                                                          }).bind('click mouseenter', function(){ playWithRussianIcon(this) });
-
-  });
-
-  function playWithRussianIcon(THIS) {
+    	                                                          });
+    setTimeout(function(){
     // переміщуємо московський прапор на центр екрана зверху
-  	$(THIS).css({'transition':'left .5s',
-  	             'left': bodyWidth/2})
-           // по кліку - приховуємо прапор та показуємо повідомлення
-           .bind('click mouseenter', function(){
-                    $(THIS).css({'transition':'top .5s',
-                                 'top': '-100%'});
-                    // поява підкладки
-                    $('.popups-section').css('display','block');
+    $('img.language-switcher__img[src="assets/img/ru.png"]').css({'transition' : 'left .5s',
+                                                                  'left'       : bodyWidth/2})
+                                                            // по кліку - приховуємо прапор та показуємо повідомлення
+                                                            .bind('click mouseenter', function(){
+                                                                      $(this).css({'transition' : 'top .5s',
+                                                                                   'top'        : '-100%'});
+                                                                      // поява підкладки
+                                                                      $('.popups-section').css('display','block');
 
-                    setTimeout(function(){
-                      // поява спливаючого вікна
-                      $('#popup-no-russian-language-suppurt').css('top','20px');
-                      // відмальовування потрібної кількості орнаментів
-                      var popupHeight     = $('#popup-no-russian-language-suppurt').outerHeight(),
-                          ornamentHeight  = $('.small-popup__background-image').outerHeight(),
-                          ornamentsAmount = Math.ceil(popupHeight / ornamentHeight);
-                      for (var i=0; i<ornamentsAmount-1; i++) {
-                        $('#popup-no-russian-language-suppurt .small-popup__background').append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">');
-                      }
+                                                                      setTimeout(function(){
+                                                                        // поява спливаючого вікна
+                                                                        $('#popup-no-russian-language-suppurt').css('top','20px');
+                                                                        // відмальовування потрібної кількості орнаментів
+                                                                        var popupHeight     = $('#popup-no-russian-language-suppurt').outerHeight(),
+                                                                            ornamentHeight  = $('.small-popup__background-image').outerHeight(),
+                                                                            ornamentsAmount = Math.ceil(popupHeight / ornamentHeight);
+                                                                        for (var i=0; i<ornamentsAmount-1; i++) {
+                                                                          $('#popup-no-russian-language-suppurt .small-popup__background').append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">');
+                                                                        }
 
-                    },50);
-           });
-  }
+                                                                      },50);
+                                                             });
+    },100);
+  });
 
   // навішування обробників на кнопки закриття
   $('#popup-no-russian-language-suppurt__close-button, #popup-no-russian-language-suppurt button.small-popup__button').click( function() { closeNoRussianLanguageSuppurtPopup() } );
