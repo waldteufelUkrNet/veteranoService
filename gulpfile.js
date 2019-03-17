@@ -32,7 +32,7 @@ var gulp         = require('gulp'),                  //
 gulp.task('pug', function() {
   return gulp.src('app/*.pug')
     .pipe(pug({
-      pretty: false
+      pretty: true
     }))
     .pipe(gulp.dest('app/'))
 });

@@ -3,7 +3,11 @@
 @import "style_general";
 
 //BEM-blocks
-// @import "../BEM-blocks/anti_bot_filter/anti_bot_filter.scss";
+@import "../BEM-blocks/language-switcher/language-switcher.scss";
+@import "../BEM-blocks/header/header.scss";
+@import "../BEM-blocks/small-popup/small-popup.scss";
+@import "../BEM-blocks/bg-content/bg-content.scss";
+@import "../BEM-blocks/social-btns-main/social-btns-main.scss";
 
 .main {
 	position       : relative;
