@@ -28,12 +28,6 @@ html(lang='ru')
       // SECTION 1
       section.main-section
         h1.main-section__header вакансії
-        a.place(href="#")
-          img(src="assets/img/place.png", alt="place.png")
-          span Розміщення на сайті
-        a.help(href="#")
-          img(src="assets/img/kozak.png", alt="kozak.png")
-          span Допомога проекту
 
         .infoblock
           h3.infoblock__header header harum iusto odit quia eos minima
@@ -166,6 +160,9 @@ html(lang='ru')
                 img.infoblock__social-img(src="assets/img/twitter.png", alt="twitter.png")
               a.infoblock__social-btn(href="#" target='_blank')
                 img.infoblock__social-img(src="assets/img/marker-map.png", alt="twitter.png")
+
+        include assets/BEM-blocks/banners-holder/banners-holder.pug
+
       // /SECTION 1
 
       // SECTION 2

@@ -26,6 +26,12 @@ body {
 .main-section {
 	max-width        : 1500px;
 	margin           : 70px auto 0;
+	@media only screen and (min-width: 576px) {
+		margin         : 70px 100px 0 0;
+	}
+	@media only screen and (min-width: 1720px) {
+		margin         : 70px auto 0;
+	}
 	padding          : 0 15px;
 	position         : relative;
   &__header {
@@ -52,26 +58,38 @@ body {
 	display          : none;
 }
 
+.banners-holder {
+  display          : flex;
+  justify-content  : space-around;
+  align-items      : center;
+}
+
 .place,
 .help {
-	position: absolute;
-	top: 15px;
-	font: 16px spec;
-	display: block;
-	max-height: 100px;
-	max-width: 100px;
-	text-align: center;
-	line-height: 1.1em;
+	font             : 16px spec;
+	display          : block;
+	max-height       : 100px;
+	max-width        : 100px;
+	text-align       : center;
+	line-height      : 1.1em;
   img {
-    max-width: 60px;
-    max-height: 60px;
-    display: block;
-    margin: 0 auto;
+    max-width      : 60px;
+    max-height     : 60px;
+    display        : block;
+    margin         : 0 auto;
   }
 }
-.place {
-	left: 15px;
-}
-.help {
-	right: 15px;
+
+@media only screen and (min-width: 576px) {
+	.place,
+	.help {
+		position       : fixed;
+		right          : 10px;
+	}
+	.place {
+		bottom         : calc( 50% + 60px );
+	}
+	.help {
+		bottom         : calc( 50% - 60px );
+	}
 }
