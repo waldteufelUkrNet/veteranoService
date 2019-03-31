@@ -1,0 +1,115 @@
+doctype html
+html(lang='ua')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description' content="VeteranoService - свій до свого по своє ;-)")
+
+    title VeteranoService
+    link(rel='icon', href='assets/img/logo.png')
+
+    // css-libs (slick, animate ...)
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/reset.css')
+    link(rel='stylesheet', type='text/css', href='assets/libs-css/animate.css')
+
+    // jquery
+    script(src='assets/libs/jquery.js')
+
+    // own stylesheet
+    link(rel='stylesheet', type='text/css', href='assets/css/form.css')
+
+  body
+    // HEADER
+    include assets/BEM-blocks/header/header.pug
+    // /HEADER
+
+    // MAIN SECTION
+    main.main
+      // SECTION 1
+      section.main-section
+        h1.main-section__header Розміщення на сайті Veterano Service
+
+        .infoblock
+          form.coworking-form
+
+            .colump-wrapper
+
+              .left-column
+                label(for='email') Електронна адреса *
+                input#email(type='text' placeholder='введіть пошту')
+
+                label(for='companyName') Назва компанії, бренд *
+                input#companyName(type='text')
+
+                label(for='ownerName') Ім'я та прізвище власника(власників) *
+                input#ownerName(type='text')
+
+                label(for='logo') 3. Логотип компанії/сервісу/ послуги у форматі .jpg, розмір 206рх*206рх. Якщо лого немає додайте фото продукції. * Додати файл ЯК???
+                input#logo(type='text')
+
+                label(for='ownerFoto') Фото власника(власників) бажано в військовій формі. Додати файл ЯК???
+                input#ownerFoto(type='text')
+
+                label(for='ownerBiography') Інформація про власника-ветерана-нів(в складі якого бату воювали). якщо можна публікувать. *
+                input#ownerBiography(type='text')
+
+                label(for='businessHistory') Історія виникнення бізнесу(звідки ідея?) 4 речення. Дивіться приклади історій на сайті. http://veterano-service.com/jewelry.html Важливо! *
+                input#businessHistory(type='text')
+
+                label(for='businessCore') Суть бізнесу/послуги(6 речень). Дивіться приклади на сайті http://veterano-service.com/jewelry.html . Важливо! *
+                input#businessCore(type='text')
+
+              .right-column
+
+                label(for='city') Місто: *
+                input#city(type='text')
+
+                label(for='adress') Адреса(адреса розміщення бізнесу):
+                input#adress(type='text')
+
+                label(for='contactPhone') Контактний номер: *
+                input#contactPhone(type='text')
+
+                label(for='linkToSite') Посилання на сайт:( якщо сайт є).
+                input#linkToSite(type='text')
+
+                label(for='linkToOwnerSocialNetworkingWebsite') Посилання на сторінку в соцмережі власника/власників. *
+                input#linkToOwnerSocialNetworkingWebsite(type='text')
+
+                label(for='linkToBusinessSocialNetworkingWebsite') Посилання на сторінку бізнесу в соціальній мережі:
+                input#linkToBusinessSocialNetworkingWebsite(type='text')
+
+                label(for='infoPhone') Ім’я та телефон контактної особи з питань надання інформації для проекту «ВЕТЕРАНО СЕРВІС»
+                input#infoPhone(type='text')
+
+            p.form-info Важливо! Інформація, яку ви надасте, буде опублікована з виправленням граматичних помилок, але її наявність і якість залежить від вас. Допоможіть нам краще вас рекламувати. Поставтеся до написання інформації про себе та про свій бізнес відповідально. Також для кращої комунікації та поінформованості про роботу проекту просимо підписатися на наші сторінки в FB:https://www.facebook.com/veteranoservice/?ref=bookmarks та Twitter: https://twitter.com/ServiceVeterano
+
+            p.form-info Дякуємо, що заповнили нашу форму для приєднання до платформи Veterano Service. Далі наші співробітники напишуть текст до публікації, та пришлють вам на затвердження. В порядку черги ваш бізнес буде розміщено на сайті. Текст для публікації вам буде відправлено нашою колегою Тетяною Даневич. Додавайтесь в друзі щоб не пропустити повідомлення :-)) https://www.facebook.com/profile.php?id=100002106068286
+
+            p.form-info Копії ваших відповідей буде надіслано на вказану електронну адресу.
+
+            button(type='button') Надіслати
+
+        include assets/BEM-blocks/banners-holder/banners-holder.pug
+
+      // /SECTION 1
+
+      // SECTION 3
+      section.popups-section
+        //- include assets/BEM-blocks/popup-compliment/popup-compliment.pug
+        include assets/BEM-blocks/popup-no-russian-language-suppurt/popup-no-russian-language-suppurt.pug
+      // /SECTION 3
+
+      include assets/BEM-blocks/pagination/pagination.pug
+
+    // /MAIN SECTION
+
+    // FOOTER
+    //- include assets/BEM-blocks/footer/footer.pug
+    // /FOOTER
+
+    //- script(src='assets/libs/fontawesome-all.js')
+
+    // own js
+    script(src='assets/js/form.js')
+    script(src='assets/js/read-more-btn.js')
