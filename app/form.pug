@@ -46,12 +46,15 @@ html(lang='ua')
 
               label(for='email') Електронна адреса *
               input.coworking-form__input#email(type='text' placeholder='введіть пошту')
+              .coworking-form__info.coworking-form__info_red#email-error-info Введіть коректну електронну адресу!
 
               label(for='companyName') Назва компанії, бренд *
               input.coworking-form__input#companyName(type='text' placeholder='введіть назву компанії')
+              .coworking-form__info.coworking-form__info_red#companyName-error-info Введіть назву компанії або бренд!
 
               label(for='ownerName') Ім'я та прізвище власника/власників *
               input.coworking-form__input#ownerName(type='text' placeholder="введіть ім'я та прізвище")
+              .coworking-form__info.coworking-form__info_red#ownerName-error-info Введіть ім'я та празвище
 
               label(for='logo') Логотип компанії/сервісу/послуги у форматі .jpg, розмір 206рх*206рх. Якщо лого немає, додайте фото продукції. *
               input#logo(type='file')
@@ -61,6 +64,7 @@ html(lang='ua')
 
               label(for='ownerBiography') Інформація про власника-ветерана(-нів) (у складі якого бату воювали - якщо можна публікувати). *
               input.coworking-form__input#ownerBiography(type='text')
+              .coworking-form__info.coworking-form__info_red#ownerBiography-error-info Надайте інформацію про власника бізнесу
 
               label(for='businessHistory') Історія виникнення бізнесу (звідки ідея?). 4 речення. Дивіться приклади історій на сайті
                 |
@@ -69,6 +73,7 @@ html(lang='ua')
                 |
                 | Важливо! *
               textarea.coworking-form__textarea#businessHistory
+              .coworking-form__info.coworking-form__info_red#businessHistory-error-info Напишіть історію виникнення біхнесу
 
               label(for='businessCore') Суть бізнесу/послуги. 6 речень. Дивіться приклади на сайті
                 |
@@ -77,15 +82,18 @@ html(lang='ua')
                 |
                 | Важливо! *
               textarea.coworking-form__textarea#businessCore(type='text')
+              .coworking-form__info.coworking-form__info_red#businessCore-error-info Опишіть суть Вашого бізнесу
 
               label(for='city') Місто: *
               input.coworking-form__input#city(type='text' placeholder='введіть назву міста')
+              .coworking-form__info.coworking-form__info_red#city-error-info Вкажіть місто розташування бізнесу
 
               label(for='adress') Адреса (адреса розміщення бізнесу):
               input.coworking-form__input#adress(type='text' placeholder='введіть адресу розміщення бізнесу')
 
               label(for='contactPhone') Контактний номер: *
               input.coworking-form__input#contactPhone(type='text' placeholder='введіть контактний номер')
+              .coworking-form__info.coworking-form__info_red Введіть контактний номер
 
               label(for='linkToSite') Посилання на сайт (якщо сайт є):
               input.coworking-form__input#linkToSite(type='text' placeholder='введіть посилання на сайт')
@@ -102,8 +110,9 @@ html(lang='ua')
               label(style='display: flex; align-items: center')
                 input(type='checkbox' style='margin-right: 10px')
                 span Я люблю неньку Україну і не веду бізнесу з окупантами і сєпарами
+              .coworking-form__info.coworking-form__info_red Пройдіть перевірку на сєпара!
 
-            p.coworking-form__info.coworking-form__info_green Дякуємо, що заповнили нашу форму для приєднання до платформи Veterano Service. Далі наші співробітники напишуть текст до публікації, та пришлють Вам на затвердження. В порядку черги Ваш бізнес буде розміщено на сайті. Текст для публікації вам буде відправлено нашою колегою Тетяною Даневич. Додавайтесь в друзі, щоб не пропустити повідомлення :-))
+            p.coworking-form__info.coworking-form__info_green.coworking-form__info_thanksgiving Дякуємо, що заповнили нашу форму для приєднання до платформи Veterano Service. Далі наші співробітники напишуть текст до публікації, та пришлють Вам на затвердження. В порядку черги Ваш бізнес буде розміщено на сайті. Текст для публікації вам буде відправлено нашою колегою Тетяною Даневич. Додавайтесь в друзі, щоб не пропустити повідомлення :-))
               |
               |
               a.coworking-form__link(href='https://www.facebook.com/profile.php?id=100002106068286' target='_blank' title='https://www.facebook.com/profile.php?id=100002106068286') посилання
@@ -111,7 +120,7 @@ html(lang='ua')
               br
               | Копії ваших відповідей буде надіслано на вказану електронну адресу.
 
-            button.coworking-form__btn(type='button') Надіслати
+            button.coworking-form__btn#submitBtn(type='button') Надіслати
 
         include assets/BEM-blocks/banners-holder/banners-holder.pug
 

@@ -50,13 +50,18 @@
     background-color      : white;
     border                : 0px solid transparent;
     border-left           : 6px solid transparent;
-    padding               : 10px;
-    margin                : 10px 0;
+    padding               : 6px 10px;
+    margin                : -5px 0 10px 0;
     text-align            : justify;
     font-size             : 2rem;
+    transition            : height .3s;
     &_red {
       border-left-color   : red;
-      background-color    : #23cd45;
+      background-color    : rgba(255,0,0,.2);
+      padding             : 0px 10px;
+      height              : 0px;
+      line-height         : 28px;
+      overflow            : hidden;
     }
     &_yellow {
       border-left-color   : yellow;
@@ -66,6 +71,9 @@
       border-left-color   : green;
       background-color    : rgba(35, 204, 69, .2);
     }
+    &_thanksgiving {
+      margin-top          : 10px;
+    }
   }
   &__btn {
     margin                : 10px auto;
@@ -74,11 +82,13 @@
     height                : 40px;
     border                : 1px solid transparent;
     border-radius         : 4px;
-    background-color      : green;
+    background-color      : silver;
     text-transform        : uppercase;
     color                 : white;
     font                  : 1.6rem spec;
+    font-weight           : 900;
     letter-spacing        : 1px;
+    cursor                : pointer;
   }
 }
 
