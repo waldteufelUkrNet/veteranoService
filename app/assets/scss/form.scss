@@ -73,6 +73,9 @@
     }
     &_thanksgiving {
       margin-top          : 10px;
+      height              : 0px;
+      overflow            : hidden;
+      padding             : 0px 10px;
     }
   }
   &__btn {
@@ -89,6 +92,7 @@
     font-weight           : 900;
     letter-spacing        : 1px;
     cursor                : pointer;
+    transition            : background-color .5s, border-color .5s;
   }
 }
 

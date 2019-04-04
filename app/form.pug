@@ -58,9 +58,11 @@ html(lang='ua')
 
               label(for='logo') Логотип компанії/сервісу/послуги у форматі .jpg, розмір 206рх*206рх. Якщо лого немає, додайте фото продукції. *
               input#logo(type='file')
+              .coworking-form__info.coworking-form__info_red#logo-error-info Вкажіть шлях до файлу
 
               label(for='ownerFoto') Фото власника/власників, бажано у військовій формі.
               input#ownerFoto(type='file')
+              .coworking-form__info.coworking-form__info_red#ownerFoto-error-info Вкажіть шлях до файлу
 
               label(for='ownerBiography') Інформація про власника-ветерана(-нів) (у складі якого бату воювали - якщо можна публікувати). *
               input.coworking-form__input#ownerBiography(type='text')
@@ -93,13 +95,14 @@ html(lang='ua')
 
               label(for='contactPhone') Контактний номер: *
               input.coworking-form__input#contactPhone(type='text' placeholder='введіть контактний номер')
-              .coworking-form__info.coworking-form__info_red Введіть контактний номер
+              .coworking-form__info.coworking-form__info_red#contactPhone-error-info Введіть контактний номер
 
               label(for='linkToSite') Посилання на сайт (якщо сайт є):
               input.coworking-form__input#linkToSite(type='text' placeholder='введіть посилання на сайт')
 
               label(for='linkToOwnerSocialNetworkingWebsite') Посилання на сторінку в соцмережі власника/власників: *
-              input.coworking-form__input#linkToOwnerSocialNetworkingWebsite(type='text' placeholder='введіть посилання на сторінку в соцмережі')
+              input.coworking-form__input#linkToOwnerSocialNetworkingWebsite
+              .coworking-form__info.coworking-form__info_red#linkToOwnerSocialNetworkingWebsite-error-info(type='text' placeholder='введіть посилання на сторінку в соцмережі')
 
               label(for='linkToBusinessSocialNetworkingWebsite' placeholder='введіть посилання на сторінку в соцмережі') Посилання на сторінку бізнесу в соціальній мережі:
               input.coworking-form__input#linkToBusinessSocialNetworkingWebsite(type='text' placeholder='введіть посилання на сторінку в соцмережі')
@@ -107,12 +110,12 @@ html(lang='ua')
               label(for='infoPhone') Ім’я та телефон контактної особи з питань надання інформації для проекту «ВЕТЕРАНО СЕРВІС»
               input.coworking-form__input#infoPhone(type='text' placeholder='введіть контакти для ВЕТЕРАНО СЕРВІСА')
 
-              label(style='display: flex; align-items: center')
-                input(type='checkbox' style='margin-right: 10px')
+              label#loveToUkraine-label(style='display: flex; align-items: center')
+                input#loveToUkraine(type='checkbox' style='margin-right: 10px')
                 span Я люблю неньку Україну і не веду бізнесу з окупантами і сєпарами
-              .coworking-form__info.coworking-form__info_red Пройдіть перевірку на сєпара!
+              .coworking-form__info.coworking-form__info_red#loveToUkraine-error-info Пройдіть перевірку на сєпара!
 
-            p.coworking-form__info.coworking-form__info_green.coworking-form__info_thanksgiving Дякуємо, що заповнили нашу форму для приєднання до платформи Veterano Service. Далі наші співробітники напишуть текст до публікації, та пришлють Вам на затвердження. В порядку черги Ваш бізнес буде розміщено на сайті. Текст для публікації вам буде відправлено нашою колегою Тетяною Даневич. Додавайтесь в друзі, щоб не пропустити повідомлення :-))
+            p.coworking-form__info.coworking-form__info_green.coworking-form__info_thanksgiving#thanksgiving Дякуємо, що заповнили нашу форму для приєднання до платформи Veterano Service. Далі наші співробітники напишуть текст до публікації, та пришлють Вам на затвердження. В порядку черги Ваш бізнес буде розміщено на сайті. Текст для публікації вам буде відправлено нашою колегою Тетяною Даневич. Додавайтесь в друзі, щоб не пропустити повідомлення :-))
               |
               |
               a.coworking-form__link(href='https://www.facebook.com/profile.php?id=100002106068286' target='_blank' title='https://www.facebook.com/profile.php?id=100002106068286') посилання
