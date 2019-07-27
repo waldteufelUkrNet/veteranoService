@@ -22,3 +22,37 @@ index-html:
 
 6. допомога проекту, и розмищення на сати - это тоже ставим, они пока не опредилились с картинками, но это я потом поменяю если что. (это у тебя есть в эскизах, низний левый - правый угол, фиксированнные иконки, дабы при прокрутке не убегали) ну и клик на эти иконки вызывают попапы. Заполнение попапов - на одной - форма (см. сайт https://docs.google.com/forms/d/1CBbjTerOF5-CtGI4GWI3fPU945Y189kdqJ1qS9jvCds/viewform?edit_requested=true), а допомога - попап с текстом
 
+
+
+
+grid -> flex
+------------
+business.css:
+
+  .business-wrapper {
+    // display              : grid;
+    // justify-content      : center;
+    // grid-template-columns: repeat(auto-fill, 280px);
+    display                 : flex;
+    flex-wrap               : wrap;
+    justify-content         : center;
+    align-content           : center;
+  }
+  .business:last-of-type {
+    // margin-right         : auto;
+  }
+
+form.css:
+
+  .coworking-form label {
+    margin-top              : 20px;
+  }
+  .coworking-form__colump-wrapper {
+    // display               : grid;
+    // grid-template-columns : repeat(1, 1fr);
+    // grid-gap              : 10px;
+  }
+  .coworking-form__colump-wrapper > * {
+    display: block;
+    width: 100%;
+  }

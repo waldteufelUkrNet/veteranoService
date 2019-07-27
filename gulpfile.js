@@ -50,20 +50,20 @@ gulp.task('browser-sync', function() {
 // препроцесинг scss - style.scss
 gulp.task('sass', function() {
   return gulp.src(['app/assets/scss/**/*.+(scss|sass)'])
-  .pipe(sass({outputStyle: 'expanded'}))
+  .pipe(sass({outputStyle: 'compressed'}))
   .on('error', notify.onError({
     message: 'Error: <%= error.message %>',
     title: 'sass error'
   }))
-  // .pipe(autoprefixer({
-  //   browsers : ['last 10 versions', '> 1%', 'ie 8', 'ie 7'],
-  //   cascade  : true
-  // }))
-  // .pipe(csso({
-  //   restructure : true, // злиття декларацій
-  //   sourceMap   : false,
-  //   debug       : false // виведення в консоль детальної інформації
-  // }))
+  .pipe(autoprefixer({
+    browsers : ['last 10 versions', '> 1%', 'ie 8', 'ie 7'],
+    cascade  : true
+  }))
+  .pipe(csso({
+    restructure : true, // злиття декларацій
+    sourceMap   : false,
+    debug       : false // виведення в консоль детальної інформації
+  }))
   .pipe(gulp.dest('app/assets/css'))
   .pipe(browserSync.reload({stream:true}))
 });
@@ -71,20 +71,20 @@ gulp.task('sass', function() {
 // препроцесинг scss - BEM-blocks
 gulp.task('sass-bem', function() {
   return gulp.src(['app/assets/BEM-blocks/*/*.+(scss|sass)'])
-  .pipe(sass({outputStyle: 'expanded'}))
+  .pipe(sass({outputStyle: 'compressed'}))
   .on('error', notify.onError({
     message: 'Error: <%= error.message %>',
     title: 'sass error'
   }))
-  // .pipe(autoprefixer({
-  //   browsers : ['last 10 versions', '> 1%', 'ie 8', 'ie 7'],
-  //   cascade  : true
-  // }))
-  // .pipe(csso({
-  //   restructure : true, // злиття декларацій
-  //   sourceMap   : false,
-  //   debug       : false // виведення в консоль детальної інформації
-  // }))
+  .pipe(autoprefixer({
+    browsers : ['last 10 versions', '> 1%', 'ie 8', 'ie 7'],
+    cascade  : true
+  }))
+  .pipe(csso({
+    restructure : true, // злиття декларацій
+    sourceMap   : false,
+    debug       : false // виведення в консоль детальної інформації
+  }))
   .pipe(gulp.dest('app/assets/BEM-blocks'))
   .pipe(browserSync.reload({stream:true}))
 });
@@ -92,7 +92,7 @@ gulp.task('sass-bem', function() {
 //мініфікація js - style.js
 gulp.task('js', function() {
   return gulp.src(['app/assets/js-expanded/*.js'])
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('app/assets/js'))
     .pipe(browserSync.reload({stream:true}));
 });
@@ -100,7 +100,7 @@ gulp.task('js', function() {
 //мініфікація js - BEM-blocks
 gulp.task('js-bem', function() {
   return gulp.src(['app/assets/BEM-blocks/*/*.js', '!app/assets/BEM-blocks/minjs/*.js'])
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('app/assets/BEM-blocks/minjs'));
 });
 

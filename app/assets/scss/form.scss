@@ -15,9 +15,16 @@
   max-width               : 600px;
   margin                  : 0 auto;
   &__colump-wrapper {
-    display               : grid;
-    grid-template-columns : repeat(1, 1fr);
-    grid-gap              : 10px;
+    // display               : grid;
+    // grid-template-columns : repeat(1, 1fr);
+    // grid-gap              : 10px;
+    & > * {
+      display: block;
+      width: 100%;
+    }
+  }
+  label {
+    margin-top: 20px;
   }
   &__link {
     color                 : dodgerblue;

@@ -25,34 +25,7 @@
         <div class="language-switcher__shutter-en" href="#"></div>
         <div class="language-switcher__shutter-ru" href="#"></div>
       </div>
-      <script>$(document).ready(function(){
-
-  // $('.language-switcher__shutter').click(function(){
-  //   if ( $('.language-switcher').attr('data-language') == 'ua' ) {
-
-  //     $(this).css('left','0%');
-  //     $('.language-switcher').attr('data-language', 'en');
-  //   } else {
-  //     $(this).css('left','33.33%');
-  //     $('.language-switcher').attr('data-language', 'ua');
-  //   }
-
-  // });
-
-  $('.language-switcher__shutter-ua').click(function(){
-    $('.language-switcher__shutter-ua').css('height','.1px');
-    $('.language-switcher__shutter-en').css('height','100%');
-    $('.language-switcher').attr('data-language', 'ua');
-  });
-
-  $('.language-switcher__shutter-en').click(function(){
-  	$('.language-switcher__shutter-ua').css('height','100%');
-    $('.language-switcher__shutter-en').css('height','.1px');
-    $('.language-switcher').attr('data-language', 'en');
-  });
-
-});
-      </script>
+      <script>$(document).ready(function(){$(".language-switcher__shutter-ua").click(function(){$(".language-switcher__shutter-ua").css("height",".1px"),$(".language-switcher__shutter-en").css("height","100%"),$(".language-switcher").attr("data-language","ua")}),$(".language-switcher__shutter-en").click(function(){$(".language-switcher__shutter-ua").css("height","100%"),$(".language-switcher__shutter-en").css("height",".1px"),$(".language-switcher").attr("data-language","en")})});</script>
       <!-- ↑↑↑ BEM-blocks: language-switcher (end) ↑↑↑-->
       <div class="header__menu">
         <button class="header__menu-btn"><span>МЕНЮ</span><img src="assets/img/gear-wheel.png" alt="gear-wheel.png"></button>
@@ -68,104 +41,7 @@
         </ul>
       </div>
     </div>
-    <script>$(document).ready(function(){
-
-  /* ↓↓↓ зміна розмірів логотипу при прокрутці ↓↓↓ */
-  if ( $('.header').outerWidth() > 480 ) {
-    if ( $('.header').offset().top >= 30 ) {
-      $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
-      $('.header').css({'background-color':'rgba(0,0,0,.75)'});
-    } else {
-      $('.header__logo-img').css({'height':'160px','margin-top':'0px'});
-      $('.header').css({'background-color':'transparent'});
-    }
-  } else {
-    $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
-    $('.header').css({'background-color':'rgba(0,0,0,.75)'});
-  }
-
-  $(document).scroll(function(){
-    if ( $('.header').outerWidth() > 480 ) {
-      if ( $('.header').offset().top >= 30 ) {
-        $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
-        $('.header').css({'background-color':'rgba(0,0,0,.75)'});
-      } else {
-        $('.header__logo-img').css({'height':'160px','margin-top':'0px'});
-        $('.header').css({'background-color':'transparent'});
-      }
-    } else {
-      $('.header__logo-img').css({'height':'50px','margin-top':'-5px'});
-      $('.header').css({'background-color':'rgba(0,0,0,.75)'});
-    }
-  }); /* ↑↑↑ /зміна розмірів логотипу при прокрутці ↑↑↑ */
-
-  /* ↓↓↓ логіка меню ↓↓↓ */
-  var isMenuClicable = true;
-  var isMemuOpen     = false;
-  var arrOfMenuItems = $('.header__menu-link');
-  var delay          = 0;
-  var delayStep      = 70;
-  var freezeTime     = arrOfMenuItems.length * delayStep;
-
-
-  $('.header__menu-btn').click(function(){
-
-    // якщо меню зараз не анімується (не відкивається і не закривається)
-    if (isMenuClicable) {
-
-      // блокування повторних кліків на час анімації
-      isMenuClicable = false;
-      setTimeout(function(){
-        isMenuClicable = true
-      },freezeTime);
-
-      // відкриття/закриття
-      if (isMemuOpen) {
-        closeMenu()
-      } else {
-        $('.header__menu-list').css('display','block');
-
-        delay = 0;
-        // навішування анімації через цикл - для цього потрібна додаткова анонімна ф-я
-        for (var i=0; i<arrOfMenuItems.length; i++) {
-          (function(j){
-            setTimeout(function(){
-              $(arrOfMenuItems[j]).css({'right':'0%'});
-            }, delay);
-            delay = delay + delayStep;
-          })(i);
-        }
-        isMemuOpen = true;
-      }
-    }
-  });
-  /* ↑↑↑ /логіка меню ↑↑↑ */
-
-  $(document).click(function(event){
-    if ( isMemuOpen && isMenuClicable && event.target.className != 'header__menu-btn' ) {
-      closeMenu()
-    }
-  });
-
-  function closeMenu() {
-    // закрити меню
-    delay = 0;
-    // навішування анімації через цикл - для цього потрібна додаткова анонімна ф-я
-    for (var i=0; i<arrOfMenuItems.length; i++) {
-      (function(j){
-        setTimeout(function(){
-          $(arrOfMenuItems[j]).css({'right':'calc( -100% - 15px )'});
-        }, delay);
-        delay = delay + delayStep;
-      })(i);
-    }
-    setTimeout(function(){
-      $('.header__menu-list').css('display','none');
-    },delay);
-    isMemuOpen = false;
-  }
-});
-    </script>
+    <script>$(document).ready(function(){480<$(".header").outerWidth()?30<=$(".header").offset().top?($(".header__logo-img").css({height:"50px","margin-top":"-5px"}),$(".header").css({"background-color":"rgba(0,0,0,.75)"})):($(".header__logo-img").css({height:"160px","margin-top":"0px"}),$(".header").css({"background-color":"transparent"})):($(".header__logo-img").css({height:"50px","margin-top":"-5px"}),$(".header").css({"background-color":"rgba(0,0,0,.75)"})),$(document).scroll(function(){480<$(".header").outerWidth()?30<=$(".header").offset().top?($(".header__logo-img").css({height:"50px","margin-top":"-5px"}),$(".header").css({"background-color":"rgba(0,0,0,.75)"})):($(".header__logo-img").css({height:"160px","margin-top":"0px"}),$(".header").css({"background-color":"transparent"})):($(".header__logo-img").css({height:"50px","margin-top":"-5px"}),$(".header").css({"background-color":"rgba(0,0,0,.75)"}))});var o=!0,r=!1,t=$(".header__menu-link"),n=0,a=70*t.length;function c(){for(var e=n=0;e<t.length;e++)!function(e){setTimeout(function(){$(t[e]).css({right:"calc( -100% - 15px )"})},n),n+=70}(e);setTimeout(function(){$(".header__menu-list").css("display","none")},n),r=!1}$(".header__menu-btn").click(function(){if(o)if(o=!1,setTimeout(function(){o=!0},a),r)c();else{$(".header__menu-list").css("display","block");for(var e=n=0;e<t.length;e++)!function(e){setTimeout(function(){$(t[e]).css({right:"0%"})},n),n+=70}(e);r=!0}}),$(document).click(function(e){r&&o&&"header__menu-btn"!=e.target.className&&c()})});</script>
     <!-- ↑↑↑ BEM-blocks: header (end) ↑↑↑-->
     <!-- /HEADER-->
     <!-- MAIN SECTION-->
@@ -265,67 +141,7 @@
           </div>
           <div class="small-popup__background"><img class="small-popup__background-image" src="assets/img/ornament.jpg" alt="ornament.jpg"></div>
         </div>
-        <script>$(document).ready(function(){
-
-  var bodyWidth;
-
-  $('.language-switcher__shutter-ru').click(function(){
-
-    // змінюємо зовнішній вигляд мовної панелі
-  	$('.language-switcher__shutter-ua').css({'width':'50%', 'left':'0%'});
-    $('.language-switcher__shutter-en').css({'width':'50%', 'left':'50%'});
-    $('.language-switcher__shutter-ru').css({'display':'none'});
-
-    // змінюємо положення московського прапора
-    var imageTop  = $('img.language-switcher__img[src="assets/img/ru.png"]').offset().top;
-    var imageLeft = $('img.language-switcher__img[src="assets/img/ru.png"]').offset().left;
-    bodyWidth     = $('body').outerWidth();
-
-    $('img.language-switcher__img[src="assets/img/ru.png"]').remove();
-    $('body').append('<img class="language-switcher__img" src="assets/img/ru.png">');
-    $('img.language-switcher__img[src="assets/img/ru.png"]').css({'position'   : 'absolute',
-    	                                                            'zIndex'     : 8889,
-    	                                                            'top'        : imageTop - 3,
-    	                                                            'left'       : imageLeft - 88,
-    	                                                            'cursor'     : 'pointer'
-    	                                                          });
-    setTimeout(function(){
-    // переміщуємо московський прапор на центр екрана зверху
-    $('img.language-switcher__img[src="assets/img/ru.png"]').css({'transition' : 'left .5s',
-                                                                  'left'       : bodyWidth/2})
-                                                            // по кліку - приховуємо прапор та показуємо повідомлення
-                                                            .bind('click mouseenter', function(){
-                                                                      $(this).css({'transition' : 'top .5s',
-                                                                                   'top'        : '-100%'});
-                                                                      // поява підкладки
-                                                                      $('.popups-section').css('display','block');
-
-                                                                      setTimeout(function(){
-                                                                        // поява спливаючого вікна
-                                                                        $('#popup-no-russian-language-suppurt').css('top','20px');
-                                                                        // відмальовування потрібної кількості орнаментів
-                                                                        var popupHeight     = $('#popup-no-russian-language-suppurt').outerHeight(),
-                                                                            ornamentHeight  = $('.small-popup__background-image').outerHeight(),
-                                                                            ornamentsAmount = Math.ceil(popupHeight / ornamentHeight);
-                                                                        for (var i=0; i<ornamentsAmount-1; i++) {
-                                                                          $('#popup-no-russian-language-suppurt .small-popup__background').append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">');
-                                                                        }
-
-                                                                      },50);
-                                                             });
-    },100);
-  });
-
-  // навішування обробників на кнопки закриття
-  $('#popup-no-russian-language-suppurt__close-button, #popup-no-russian-language-suppurt button.small-popup__button').click( function() { closeNoRussianLanguageSuppurtPopup() } );
-
-  function closeNoRussianLanguageSuppurtPopup () {
-    $('#popup-no-russian-language-suppurt').remove();
-    $('.popups-section').css('display','none');
-  }
-
-});
-        </script>
+        <script>$(document).ready(function(){var u;$(".language-switcher__shutter-ru").click(function(){$(".language-switcher__shutter-ua").css({width:"50%",left:"0%"}),$(".language-switcher__shutter-en").css({width:"50%",left:"50%"}),$(".language-switcher__shutter-ru").css({display:"none"});var s=$('img.language-switcher__img[src="assets/img/ru.png"]').offset().top,t=$('img.language-switcher__img[src="assets/img/ru.png"]').offset().left;u=$("body").outerWidth(),$('img.language-switcher__img[src="assets/img/ru.png"]').remove(),$("body").append('<img class="language-switcher__img" src="assets/img/ru.png">'),$('img.language-switcher__img[src="assets/img/ru.png"]').css({position:"absolute",zIndex:8889,top:s-3,left:t-88,cursor:"pointer"}),setTimeout(function(){$('img.language-switcher__img[src="assets/img/ru.png"]').css({transition:"left .5s",left:u/2}).bind("click mouseenter",function(){$(this).css({transition:"top .5s",top:"-100%"}),$(".popups-section").css("display","block"),setTimeout(function(){$("#popup-no-russian-language-suppurt").css("top","20px");for(var s=$("#popup-no-russian-language-suppurt").outerHeight(),t=$(".small-popup__background-image").outerHeight(),u=Math.ceil(s/t),e=0;e<u-1;e++)$("#popup-no-russian-language-suppurt .small-popup__background").append('<img class="small-popup__background-image" src="assets/img/ornament.jpg", alt="ornament.jpg">')},50)})},100)}),$("#popup-no-russian-language-suppurt__close-button, #popup-no-russian-language-suppurt button.small-popup__button").click(function(){$("#popup-no-russian-language-suppurt").remove(),$(".popups-section").css("display","none")})});</script>
         <!-- ↑↑↑ BEM-blocks: popup-no-russian-language-suppurt (end) ↑↑↑-->
       </section>
       <!-- /SECTION 3-->
