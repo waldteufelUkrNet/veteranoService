@@ -9,7 +9,7 @@
   "author": "waldteufel@ukr.net",
   "license": "ISC",
   "dependencies": {
-    "npm": "^6.2.0"
+    "npm": "^10.2.5"
   },
   "devDependencies": {
     "browser-sync": "^2.24.5",
